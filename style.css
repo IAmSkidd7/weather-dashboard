@@ -1,0 +1,38 @@
+article {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.belowTwo {
+  background-color: green;
+  color: white;
+  width: max-content;
+}
+
+.belowFive {
+  background-color: yellow;
+  color: white;
+  width: max-content;
+}
+
+.belowSeven {
+  background-color: orange;
+  color: white;
+  width: max-content;
+}
+
+.belowTen {
+  background-color: red;
+  color:white;
+  width: max-content;
+}
+
+.eleven {
+  background-color: purple;
+  color: white;
+  width: max-content;
+}
+
+section {
+  display:block;
+}
