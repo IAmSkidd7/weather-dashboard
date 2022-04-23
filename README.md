@@ -1,9 +1,13 @@
 # weather-dashboard
 
 ## Table of Contents
-1. [Description](#Description)
+1. [Live Link](#Live-Link)
+2. [Description](#Description)
 3. [Usage](#Usage)
-2. [Visuals](#Visuals)
+4. [Visuals](#Visuals)
+
+## Live Link
+[Live Link] (https://iamskidd7.github.io/weather-dashboard/)
 
 ## Description
 This is a weather forecast application powered by the Open weather API that allows you to find the weather in whatever location you search for on the website.
