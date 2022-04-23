@@ -87,9 +87,9 @@ function fetchAPI(requestURL) {
 
       var uvDisplay = document.createElement('h3');
       var lat = data.coord.lat;
-      // console.log(lat);
+     
       var lon = data.coord.lon;
-      // console.log(lon);
+      
       var newURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiCode + '&units=imperial';
       fetch(newURL)
         .then(function (response) {
@@ -100,7 +100,7 @@ function fetchAPI(requestURL) {
           console.log(dataSet);
           uvDisplay.textContent = "UV Index: " + dataSet.current.uvi;
           
-          //for the UV index
+          //shows the UV index
           if (dataSet.current.uvi < 2) {
             uvDisplay.classList.add('belowTwo');
           }
@@ -119,36 +119,36 @@ function fetchAPI(requestURL) {
           
           mainDisplayEl.appendChild(uvDisplay);
 
-          //for the 5-Day Forecast:
+          //shows the 5-Day Forecast:
           for(var i = 0; i < 5; i++) {
             var card = document.createElement('section');
             card.addclass
             
-            //create date
+            //display the date
             var dateDisplayCard = document.createElement('p');
             console.log(dataSet.daily[i].dt);
             dateDisplayCard.textContent = moment.unix(dataSet.daily[i].dt).format("MM/DD/YYYY");
             card.append(dateDisplayCard);
 
-            //create image
+            //display icons for chosen city
             var iconDisplayCard = document.createElement('img');
             console.log(dataSet.daily[i].weather[0].icon);
             iconDisplayCard.src = "http://openweathermap.org/img/w/" + dataSet.daily[i].weather[0].icon + ".png";
             card.append(iconDisplayCard);
 
-            //create temp
+            //display temperature in chosen city
             var tempDisplayCard = document.createElement('p');
             console.log(dataSet.daily[i].temp.day);
             tempDisplayCard.textContent = 'Temp: ' + dataSet.daily[i].temp.day + " °F";
             card.append(tempDisplayCard);
 
-            //create wind
+            //display wind in chosen city
             var windDisplayCard = document.createElement('p');
             console.log(dataSet.daily[i].wind_speed);
             windDisplayCard.textContent = 'Wind: ' + dataSet.daily[i].wind_speed + " MPH";
             card.append(windDisplayCard);
 
-            //create humidity
+            //displays humitity in chosen city
             var humidityDisplayCard = document.createElement('p');
             console.log(dataSet.daily[i].humidity);
             humidityDisplayCard.textContent = 'Humidity: ' + dataSet.daily[i].humidity + " %";
